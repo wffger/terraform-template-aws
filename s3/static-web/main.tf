@@ -113,7 +113,7 @@ resource "aws_s3_object" "jpg" {
   bucket       = aws_s3_bucket.site.id
   key          = each.value
   source       = "uploads/${each.value}"
-  content_type = "text/jpeg"
+  content_type = "image/jpeg"
   etag         = filemd5("uploads/${each.value}")
   acl          = "public-read"
   depends_on = [
