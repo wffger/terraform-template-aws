@@ -32,10 +32,10 @@ resource "aws_s3_bucket_website_configuration" "site" {
 
   routing_rule {
     condition {
-      key_prefix_equals = "/abc"
+      key_prefix_equals = "/info"
     }
     redirect {
-      replace_key_prefix_with = "coming-soon.jpg"
+      replace_key_with = "coming-soon.jpg"
     }
   }
 }
